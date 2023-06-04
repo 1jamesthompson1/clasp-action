@@ -46,17 +46,33 @@ elif [ "$8" = "deploy" ]; then
     clasp push -f
 
     if [ -n "${10}" ]; then
-      clasp deploy --description $9 -i ${10}
+      if [ -n "${11}" ]; then
+        clasp deploy --description $9 -i ${10} -V ${11}
+      else
+        clasp deploy --description $9 -i ${10}
+      fi
     else
-      clasp deploy --description $9
+      if [ -n "${11}" ]; then
+        clasp deploy --description $9 -V ${11}
+      else
+        clasp deploy --description $9
+      fi
     fi
   else
     clasp push -f
 
     if [ -n "${10}" ]; then
-      clasp deploy -i ${10}
+      if [ -n "${11}" ]; then
+        clasp deploy -i ${10} -V ${11}
+      else
+        clasp deploy -i ${10}
+      fi
     else
-      clasp deploy
+      if [ -n "${11}" ]; then
+        clasp deploy -V ${11}
+      else
+        clasp deploy
+      fi
     fi
   fi
 else

@@ -49,6 +49,10 @@ Description of the deployment.
 
 Deploy ID that will be updated with this push.
 
+### 'deployId'
+
+The version number you want for the deployment.
+
 ## Example usage
 
 ### Case to push
