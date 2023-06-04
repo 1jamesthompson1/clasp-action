@@ -48,3 +48,4 @@ runs:
     - ${{ inputs.command }}
     - ${{ inputs.description }}
     - ${{ inputs.deployId }}
+    - ${{ inputs.versionNumber}}
