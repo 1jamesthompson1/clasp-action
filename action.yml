@@ -34,6 +34,9 @@ inputs:
   deployId:
     description: 'Deploy ID that will be updated'
     required: false
+  versionNumber:
+    description: 'Version number of the deployment'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
